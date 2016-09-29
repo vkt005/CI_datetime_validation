@@ -58,11 +58,13 @@ class User extends CI_Controller {
 	}
 
 	function register() {
-    $this->form_validation->set_rules('first_name', 'First Name', 'required')
-                              ->set_rules('last_name', 'Last Name', 'required')
-                              ->set_rules('email', 'Email', 'required')
-                              ->set_rules('password', 'Password', 'required');
-                              ->set_rules('date_time', 'datetime', 'required|datetime[Y-m-d H:i:s]');
+    $this->form_validation
+   		  **->set_rules('date_time', 'datetime', 'required|datetime[Y-m-d H:i:s]');**
+    	  ->set_rules('first_name', 'First Name', 'required')
+          ->set_rules('last_name', 'Last Name', 'required')
+          ->set_rules('email', 'Email', 'required')
+          ->set_rules('password', 'Password', 'required');
+                              
         if ($this->form_validation->run() != FALSE) {
  
  // put your code here            
